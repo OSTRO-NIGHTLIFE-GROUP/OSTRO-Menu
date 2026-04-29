@@ -1,200 +1,297 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Menu</title>
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digital Menu</title>
-  <link rel="stylesheet" href="style.css" />
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#111111" />
+  </head>
 
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#111111" />
-</head>
+  <body>
+    <header>OSTRO Restaurant & Bar 24/7</header>
 
-<body>
-  <header>OSTRO Restaurant & Bar 24/7</header>
+    <div class="categories" id="categories">
+      <button class="active" onclick="showMenu('Promotion', this)">
+        Promotion
+      </button>
+      <button onclick="showMenu('Featured Food', this)">Featured Food</button>
+      <button onclick="showMenu('Snack & Appetizers', this)">
+        Snack & Appetizers
+      </button>
+      <button onclick="showMenu('Salad Selection', this)">
+        Salad Selection
+      </button>
+      <button onclick="showMenu('Japanese Selection', this)">
+        Japanese Selection
+      </button>
+      <button onclick="showMenu('Burger Selection', this)">
+        Burger-Pizza-Wrap
+      </button>
 
-  <div class="categories" id="categories">
-    <button class="active" onclick="showMenu('Promotion', this)">
-      Promotion
-    </button>
-    <button onclick="showMenu('Featured Food', this)">Featured Food</button>
-    <button onclick="showMenu('Snack & Appetizers', this)">
-      Snack & Appetizers
-    </button>
-    <button onclick="showMenu('Salad Selection', this)">
-      Salad Selection
-    </button>
-    <button onclick="showMenu('Japanese Selection', this)">
-      Japanese Selection
-    </button>
-    <button onclick="showMenu('Burger Selection', this)">
-      Burger-Pizza-Wrap
-    </button>
+      <button onclick="showMenu('Pasta', this)">Pasta</button>
+      <button onclick="showMenu('Steak Selection', this)">
+        Steak Selection
+      </button>
+      <button onclick="showMenu('Main Courses', this)">Main Courses</button>
 
-    <button onclick="showMenu('Pasta', this)">Pasta</button>
-    <button onclick="showMenu('Steak Selection', this)">
-      Steak Selection
-    </button>
-    <button onclick="showMenu('Main Courses', this)">Main Courses</button>
+      <button onclick="showMenu('Desserts', this)">Desserts</button>
+      <button onclick="showMenu('Breakfast', this)">Breakfast</button>
+      <button onclick="showMenu('Drinks', this)">Drinks</button>
+    </div>
 
-    <button onclick="showMenu('Desserts', this)">Desserts</button>
-    <button onclick="showMenu('Breakfast', this)">Breakfast</button>
-    <button onclick="showMenu('Drinks', this)">Drinks</button>
-  </div>
+    <!-- Breakfast Section -->
+    <div class="menu-image breakfast">
+      <img
+        src="images/breakfast (1).webp"
+        loading="lazy"
+        alt="Breakfast Menu 1"
+      />
+      <img
+        src="images/breakfast (2).webp"
+        loading="lazy"
+        alt="Breakfast Menu 2"
+      />
+    </div>
 
-  <!-- Breakfast Section -->
-  <div class="menu-image breakfast ">
-    <img src="images/breakfast (1).webp" loading="lazy" alt="Breakfast Menu 1" />
-    <img src="images/breakfast (2).webp" loading="lazy" alt="Breakfast Menu 2" />
-  </div>
+    <!-- Featured Food Section -->
+    <div class="menu-image featured-food">
+      <img src="images/featured.webp" loading="lazy" alt="Featured Food Menu" />
+    </div>
 
-  <!-- Featured Food Section -->
-  <div class="menu-image featured-food">
-    <img src="images/featured.webp" loading="lazy" alt="Featured Food Menu" />
-  </div>
+    <!-- Snack & Appetizers Section -->
+    <div class="menu-image snack---appetizers">
+      <img
+        src="images/snackandappetizers (1).webp"
+        loading="lazy"
+        alt="Snack & Appetizers Menu 1"
+      />
+      <img
+        src="images/snackandappetizers (2).webp"
+        loading="lazy"
+        alt="Snack & Appetizers Menu 2"
+      />
+      <img
+        src="images/Snack-Menu .webp"
+        loading="lazy"
+        alt="Snack & Appetizers Menu 3"
+      />
+      <img
+        src="images/snackandappetizers (3).webp"
+        loading="lazy"
+        alt="Snack & Appetizers Menu 3"
+      />
+    </div>
 
-  <!-- Snack & Appetizers Section -->
-  <div class="menu-image snack---appetizers">
-    <img src="images/snackandappetizers (1).webp" loading="lazy" alt="Snack & Appetizers Menu 1" />
-    <img src="images/snackandappetizers (2).webp" loading="lazy" alt="Snack & Appetizers Menu 2" />
-    <img src="images/snackandappetizers (3).webp" loading="lazy" alt="Snack & Appetizers Menu 3" />
-  </div>
+    <!-- Salad Selection Section -->
+    <div class="menu-image salad-selection">
+      <img
+        src="images/salad-selection (1).webp"
+        loading="lazy"
+        alt="Salad Selection Menu 1"
+      />
+      <img
+        src="images/salad-selection (2).webp"
+        loading="lazy"
+        alt="Salad Selection Menu 2"
+      />
+    </div>
 
-  <!-- Salad Selection Section -->
-  <div class="menu-image salad-selection">
-    <img src="images/salad-selection (1).webp" loading="lazy" alt="Salad Selection Menu 1" />
-    <img src="images/salad-selection (2).webp" loading="lazy" alt="Salad Selection Menu 2" />
-  </div>
+    <!-- Japanese Selection Section -->
+    <div class="menu-image japanese-selection">
+      <img
+        src="images/japanese-selection (1).webp"
+        loading="lazy"
+        alt="Japanese Selection Menu 1"
+      />
+      <img
+        src="images/japanese-selection (2).webp"
+        loading="lazy"
+        alt="Japanese Selection Menu 2"
+      />
+    </div>
+    <!-- Burger Selection Section -->
+    <div class="menu-image burger-selection">
+      <img
+        src="images/burger-selection.webp"
+        loading="lazy"
+        alt="Burger Selection Menu 1"
+      />
+      <img
+        src="images/pizza-selection (1).webp"
+        loading="lazy"
+        alt="Pizza Selection Menu 1"
+      />
+      <img
+        src="images/pizza-selection (2).webp"
+        loading="lazy"
+        alt="Pizza Selection Menu 2"
+      />
+      <img
+        src="images/wrap-sandwich-toasts.webp"
+        loading="lazy"
+        alt="Wrap-Sandwich-Toasts Menu"
+      />
+    </div>
 
-  <!-- Japanese Selection Section -->
-  <div class="menu-image japanese-selection">
-    <img src="images/japanese-selection (1).webp" loading="lazy" alt="Japanese Selection Menu 1" />
-    <img src="images/japanese-selection (2).webp" loading="lazy" alt="Japanese Selection Menu 2" />
-  </div>
-  <!-- Burger Selection Section -->
-  <div class="menu-image burger-selection">
-    <img src="images/burger-selection.webp" loading="lazy" alt="Burger Selection Menu 1" />
-    <img src="images/pizza-selection (1).webp" loading="lazy" alt="Pizza Selection Menu 1" />
-    <img src="images/pizza-selection (2).webp" loading="lazy" alt="Pizza Selection Menu 2" />
-    <img src="images/wrap-sandwich-toasts.webp" loading="lazy" alt="Wrap-Sandwich-Toasts Menu" />
-  </div>
+    <!-- Pasta Section -->
+    <div class="menu-image pasta">
+      <img src="images/pasta (1).webp" loading="lazy" alt="Pasta Menu 1" />
+      <img src="images/pasta (2).webp" loading="lazy" alt="Pasta Menu 2" />
+    </div>
 
-  <!-- Pasta Section -->
-  <div class="menu-image pasta">
-    <img src="images/pasta (1).webp" loading="lazy" alt="Pasta Menu 1" />
-    <img src="images/pasta (2).webp" loading="lazy" alt="Pasta Menu 2" />
-  </div>
+    <!-- Steak Selection Section -->
+    <div class="menu-image steak-selection">
+      <img
+        src="images/steak-selection.webp"
+        loading="lazy"
+        alt="Steak Selection Menu"
+      />
+    </div>
 
-  <!-- Steak Selection Section -->
-  <div class="menu-image steak-selection">
-    <img src="images/steak-selection.webp" loading="lazy" alt="Steak Selection Menu" />
-  </div>
+    <!-- Main Courses Section -->
+    <div class="menu-image main-courses">
+      <img
+        src="images/main-courses (1).webp"
+        loading="lazy"
+        alt="Main Courses Menu 1"
+      />
+      <img
+        src="images/main-courses (2).webp"
+        loading="lazy"
+        alt="Main Courses Menu 2"
+      />
+      <img
+        src="images/main-courses (3).webp"
+        loading="lazy"
+        alt="Main Courses Menu 3"
+      />
 
-  <!-- Main Courses Section -->
-  <div class="menu-image main-courses">
-    <img src="images/main-courses (1).webp" loading="lazy" alt="Main Courses Menu 1" />
-    <img src="images/main-courses (2).webp" loading="lazy" alt="Main Courses Menu 2" />
-    <img src="images/main-courses (3).webp" loading="lazy" alt="Main Courses Menu 3" />
+      <img
+        src="images/asian-main-courses (1).webp"
+        loading="lazy"
+        alt="Asian Main Courses Menu 1"
+      />
+      <img
+        src="images/asian-main-courses (2).webp"
+        loading="lazy"
+        alt="Asian Main Courses Menu 2"
+      />
+      <img
+        src="images/asian-main-courses (3).webp"
+        loading="lazy"
+        alt="Asian Main Courses Menu 3"
+      />
+      <img
+        src="images/asian-main-courses (4).webp"
+        loading="lazy"
+        alt="Asian Main Courses Menu 4"
+      />
+    </div>
 
-    <img src="images/asian-main-courses (1).webp" loading="lazy" alt="Asian Main Courses Menu 1" />
-    <img src="images/asian-main-courses (2).webp" loading="lazy" alt="Asian Main Courses Menu 2" />
-    <img src="images/asian-main-courses (3).webp" loading="lazy" alt="Asian Main Courses Menu 3" />
-    <img src="images/asian-main-courses (4).webp" loading="lazy" alt="Asian Main Courses Menu 4" />
-  </div>
+    <!-- Desserts Section -->
+    <div class="menu-image desserts">
+      <img src="images/dessets.webp" loading="lazy" alt="Desserts Menu" />
+    </div>
 
-  <!-- Desserts Section -->
-  <div class="menu-image desserts">
-    <img src="images/dessets.webp" loading="lazy" alt="Desserts Menu" />
-  </div>
+    <!-- Promotion Section -->
+    <div class="menu-image promotion active">
+      <img src="images/promotions (1).webp" loading="lazy" alt="Happy Hour" />
+      <img src="images/promotions (2).webp" loading="lazy" alt="Lady Night" />
+      <img
+        src="images/promotions (3).webp"
+        loading="lazy"
+        alt="Cocktail Night"
+      />
+      <img
+        src="images/promotions (4).webp"
+        loading="lazy"
+        alt="Chicken and Beer HP"
+      />
+    </div>
 
-  <!-- Promotion Section -->
-  <div class="menu-image promotion active">
-    <img src="images/promotions (1).webp" loading="lazy" alt="Happy Hour" />
-    <img src="images/promotions (2).webp" loading="lazy" alt="Lady Night" />
-    <img src="images/promotions (3).webp" loading="lazy" alt="Cocktail Night" />
-    <img src="images/promotions (4).webp" loading="lazy" alt="Chicken and Beer HP" />
+    <!-- Drinks Section -->
+    <div class="menu-image drinks">
+      <img
+        src="images/drinks (1).webp"
+        loading="lazy"
+        alt="Drinks Menu Cover"
+      />
+      <img src="images/drinks (2).webp" loading="lazy" alt="Drinks Menu 1" />
+      <img src="images/drinks (3).webp" loading="lazy" alt="Drinks Menu 2" />
+      <img src="images/drinks (4).webp" loading="lazy" alt="Drinks Menu 3" />
+      <img src="images/drinks (5).webp" loading="lazy" alt="Drinks Menu 4" />
+      <img src="images/drinks (6).webp" loading="lazy" alt="Drinks Menu 6" />
+      <img src="images/drinks (7).webp" loading="lazy" alt="Drinks Menu 7" />
+      <img src="images/drinks (8).webp" loading="lazy" alt="Drinks Menu 8" />
+      <img src="images/drinks (9).webp" loading="lazy" alt="Drinks Menu 9" />
+      <img src="images/drinks (10).webp" loading="lazy" alt="Drinks Menu 10" />
+      <img src="images/drinks (11).webp" loading="lazy" alt="Drinks Menu 11" />
+      <img src="images/drinks (12).webp" loading="lazy" alt="Drinks Menu 12" />
+      <img src="images/drinks (13).webp" loading="lazy" alt="Drinks Menu 13" />
+      <img src="images/drinks (14).webp" loading="lazy" alt="Drinks Menu 14" />
+      <img src="images/drinks (15).webp" loading="lazy" alt="Drinks Menu 15" />
+      <img src="images/drinks (16).webp" loading="lazy" alt="Drinks Menu 16" />
+      <img src="images/drinks (17).webp" loading="lazy" alt="Drinks Menu 17" />
+    </div>
 
-  </div>
+    <!-- Ended -->
+    <script>
+      // Enable mouse drag scrolling for categories
+      const categoriesContainer = document.getElementById("categories");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
-  <!-- Drinks Section -->
-  <div class="menu-image drinks">
-    <img src="images/drinks (1).webp" loading="lazy" alt="Drinks Menu Cover" />
-    <img src="images/drinks (2).webp" loading="lazy" alt="Drinks Menu 1" />
-    <img src="images/drinks (3).webp" loading="lazy" alt="Drinks Menu 2" />
-    <img src="images/drinks (4).webp" loading="lazy" alt="Drinks Menu 3" />
-    <img src="images/drinks (5).webp" loading="lazy" alt="Drinks Menu 4" />
-    <img src="images/drinks (6).webp" loading="lazy" alt="Drinks Menu 6" />
-    <img src="images/drinks (7).webp" loading="lazy" alt="Drinks Menu 7" />
-    <img src="images/drinks (8).webp" loading="lazy" alt="Drinks Menu 8" />
-    <img src="images/drinks (9).webp" loading="lazy" alt="Drinks Menu 9" />
-    <img src="images/drinks (10).webp" loading="lazy" alt="Drinks Menu 10" />
-    <img src="images/drinks (11).webp" loading="lazy" alt="Drinks Menu 11" />
-    <img src="images/drinks (12).webp" loading="lazy" alt="Drinks Menu 12" />
-    <img src="images/drinks (13).webp" loading="lazy" alt="Drinks Menu 13" />
-    <img src="images/drinks (14).webp" loading="lazy" alt="Drinks Menu 14" />
-    <img src="images/drinks (15).webp" loading="lazy" alt="Drinks Menu 15" />
-    <img src="images/drinks (16).webp" loading="lazy" alt="Drinks Menu 16" />
-    <img src="images/drinks (17).webp" loading="lazy" alt="Drinks Menu 17" />
-
-  </div>
-
-  <!-- Ended -->
-  <script>
-    // Enable mouse drag scrolling for categories
-    const categoriesContainer = document.getElementById("categories");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    categoriesContainer.addEventListener("mousedown", (e) => {
-      isDown = true;
-      categoriesContainer.style.cursor = "grabbing";
-      startX = e.pageX - categoriesContainer.offsetLeft;
-      scrollLeft = categoriesContainer.scrollLeft;
-    });
-
-    categoriesContainer.addEventListener("mouseleave", () => {
-      isDown = false;
-      categoriesContainer.style.cursor = "grab";
-    });
-
-    categoriesContainer.addEventListener("mouseup", () => {
-      isDown = false;
-      categoriesContainer.style.cursor = "grab";
-    });
-
-    categoriesContainer.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - categoriesContainer.offsetLeft;
-      const walk = (x - startX) * 2; // Scroll speed multiplier
-      categoriesContainer.scrollLeft = scrollLeft - walk;
-    });
-
-    function showMenu(category, button) {
-      document.querySelectorAll(".menu-image").forEach((section) => {
-        section.classList.remove("active");
+      categoriesContainer.addEventListener("mousedown", (e) => {
+        isDown = true;
+        categoriesContainer.style.cursor = "grabbing";
+        startX = e.pageX - categoriesContainer.offsetLeft;
+        scrollLeft = categoriesContainer.scrollLeft;
       });
 
-      document.querySelectorAll(".categories button").forEach((btn) => {
-        btn.classList.remove("active");
+      categoriesContainer.addEventListener("mouseleave", () => {
+        isDown = false;
+        categoriesContainer.style.cursor = "grab";
       });
 
-      // Convert category name to valid CSS class
-      const className = category.toLowerCase().replace(/[^a-z0-9]/g, "-");
-      const menuSection = document.querySelector(".menu-image." + className);
-      if (menuSection) {
-        menuSection.classList.add("active");
+      categoriesContainer.addEventListener("mouseup", () => {
+        isDown = false;
+        categoriesContainer.style.cursor = "grab";
+      });
+
+      categoriesContainer.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - categoriesContainer.offsetLeft;
+        const walk = (x - startX) * 2; // Scroll speed multiplier
+        categoriesContainer.scrollLeft = scrollLeft - walk;
+      });
+
+      function showMenu(category, button) {
+        document.querySelectorAll(".menu-image").forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        document.querySelectorAll(".categories button").forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        // Convert category name to valid CSS class
+        const className = category.toLowerCase().replace(/[^a-z0-9]/g, "-");
+        const menuSection = document.querySelector(".menu-image." + className);
+        if (menuSection) {
+          menuSection.classList.add("active");
+        }
+        button.classList.add("active");
       }
-      button.classList.add("active");
-    }
 
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js");
-    }
-  </script>
-</body>
-
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+      }
+    </script>
+  </body>
 </html>
