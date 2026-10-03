@@ -329,6 +329,24 @@
         button.classList.add("active");
       }
 
+      // Open a category from the link, e.g. menu.ostro.asia/#dj-menu (used by QR codes)
+      function openFromHash() {
+        const key = decodeURIComponent(location.hash.slice(1)).toLowerCase();
+        if (!key) return;
+        const btn = Array.from(
+          document.querySelectorAll(".categories button"),
+        ).find((b) => {
+          const m = b.getAttribute("onclick").match(/showMenu\('([^']+)'/);
+          return m && m[1].toLowerCase().replace(/[^a-z0-9]/g, "-") === key;
+        });
+        if (btn) {
+          showMenu(btn.getAttribute("onclick").match(/showMenu\('([^']+)'/)[1], btn);
+          btn.scrollIntoView({ inline: "center", block: "nearest" });
+        }
+      }
+      openFromHash();
+      window.addEventListener("hashchange", openFromHash);
+
       if ("serviceWorker" in navigator) {
         navigator.serviceWorker.register("sw.js");
       }
